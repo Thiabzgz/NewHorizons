@@ -1,0 +1,723 @@
+/* Elimina el margen general de la página */
+body {
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0; /* Elimina el margen general */
+  box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
+  max-width: 100%; /* Establece un ancho máximo para el cuerpo */
+  overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+}
+
+/* Márgenes internos del 3% para cada sección */
+header,
+.contenido,
+.producto {
+  padding: 3%;
+}
+
+header {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.titulo {
+  color: inherit;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+/* Modo Claro */
+body:not(.dark-mode) {
+  background-color: #fef6e4;
+  color: #172c66;
+}
+
+body:not(.dark-mode) header {
+  background-color: #fef6e4;
+  color: #001858;
+}
+
+body:not(.dark-mode) button {
+  color: #001858;
+}
+
+body:not(.dark-mode) #light-icon {
+  color: #001858;
+}
+
+/* Modo Obscuro */
+.dark-mode {
+  background-color: #232946;
+  color: #b8c1ec;
+}
+
+.dark-mode header {
+  background-color: #232946;
+  color: #fffffe;
+}
+
+.dark-mode button {
+  color: #232946;
+}
+
+.dark-mode #dark-icon {
+  color: #fffffe;
+}
+
+/* Estilos para la imagen */
+.img-responsive {
+  display: block;
+  margin-left: 3%; /* Márgen izquierdo del 3% */
+  margin-right: 6%; /* Márgen derecho del 6% */
+  max-width: 92%; /* Hacer que la imagen ocupe el 92% del contenedor */
+  margin-top: 2%; /* Márgen superior del 2% */
+  margin-bottom: 2%; /* Márgen inferior del 2% */
+  box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
+}
+
+/* Estilos para la nueva sección contenido */
+.contenido {
+  min-height: 78vh; /* Altura mínima del 78% del viewport height (ajusta según sea necesario) */
+}
+
+/* Estilos para el texto en modo escritorio */
+@media (min-width: 768px) {
+  .contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea el contenido al principio de la sección */
+    text-align: left;
+  }
+
+  .img-responsive {
+    max-width: 45%; /* Ajusta según sea necesario */
+  }
+
+  section p {
+    font-size: 1.9em; /* Ajusta según sea necesario */
+  }
+}
+
+/* Estilos para la nueva sección producto */
+.producto {
+  background-color: #fffffe; /* Fondo en modo claro */
+  color: #001858; /* Texto en modo claro */
+  text-align: center;
+}
+
+/* Modo Obscuro */
+.dark-mode .producto {
+  background-color: #d4d8f0; /* Fondo en modo obscuro */
+  color: #232946; /* Texto en modo obscuro */
+}
+
+/* Estilos para las tarjetas */
+.tarjeta {
+  background-color: #faeee7; /* Fondo en modo claro */
+  color: #001858; /* Texto en modo claro */
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
+  width: 100%; /* Ancho completo en dispositivos móviles */
+}
+
+/* Modo Obscuro */
+.dark-mode .tarjeta {
+  background-color: #fffffe; /* Fondo en modo obscuro */
+  color: #232946; /* Texto en modo obscuro */
+}
+
+/* Estilos para el título y el texto dentro de las tarjetas */
+.tarjeta h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.tarjeta p {
+  font-size: 1.5em;
+}
+
+/* Ajustes para dispositivos de escritorio */
+@media (min-width: 768px) {
+  /* Contenedor flex para las tarjetas */
+  .tarjetas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* Tarjeta con altura fija */
+  .tarjeta {
+    width: 48%; /* Ancho del 48% para que dos tarjetas encajen en una fila */
+    margin-bottom: 2%; /* Márgen inferior del 2% entre las tarjetas */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
+    height: 300px; /* Altura fija para todas las tarjetas */
+    padding: 2% 5%; /* Margen interno del 5% */
+  }
+}
+
+/* Agrega estilos para la sección bloques */
+.bloques {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Estilos para la parte izquierda */
+.izquierda {
+  width: 45%; /* Ajusta según sea necesario */
+  position: sticky;
+}
+
+/* Estilos para la parte derecha en la sección bloques */
+.derecha {
+  width: 45%; /* Ajusta según sea necesario */
+  position: sticky;
+  top: 0;
+}
+
+/* Estilos para las sticky cards en la sección bloques */
+.sticky-card {
+  background-color: #faeee7; /* Fondo en modo claro */
+  color: #001858; /* Texto en modo claro */
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
+}
+
+/* Modo Obscuro para las sticky cards en la sección bloques */
+.dark-mode .sticky-card {
+  background-color: #fffffe; /* Fondo en modo obscuro */
+  color: #232946; /* Texto en modo obscuro */
+}
+
+/* Estilos para las cartas en la sección bloques */
+.carta {
+  background-color: #faeee7; /* Fondo en modo claro */
+  color: #001858; /* Texto en modo claro */
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
+  display: none; /* Por defecto, las cartas están ocultas */
+  overflow: hidden; /* Oculta el desbordamiento de la carta */
+}
+
+/* Modo Obscuro para las cartas en la sección bloques */
+.dark-mode .carta {
+  background-color: #fffffe; /* Fondo en modo obscuro */
+  color: #232946; /* Texto en modo obscuro */
+}
+
+/* Estilos para el título y el texto dentro de las cartas en la sección bloques */
+.carta h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.carta p {
+  font-size: 1.5em;
+}
+
+/* Estilos para la imagen dentro de las cartas en la sección bloques */
+.carta img {
+  max-width: 20%; /* Asegura que la imagen no se desborde del contenedor */
+  height: 20%; /* Ajusta la altura automáticamente para mantener la proporción */
+}
+
+/* Estilos para la tarjeta expandida */
+.expanded-card {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+/* Estilos para el fondo oscuro detrás de la tarjeta expandida */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modo Obscuro para la tarjeta expandida y el fondo oscuro */
+.dark-mode .expanded-card,
+.dark-mode .overlay {
+  background-color: #232946; /* Fondo en modo obscuro */
+  color: #fffffe; /* Texto en modo obscuro */
+}
+
+/* Agrega estilos para la transición de la tarjeta expandida */
+.expanded-card,
+.overlay {
+  transition: 0.5s ease-in-out;
+}
+
+/* Estilos para la sección uso */
+.uso {
+  background-color: #fff; /* Fondo en modo claro */
+  color: #001858; /* Texto en modo claro */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Modo Obscuro para la sección uso */
+.dark-mode .uso {
+  background-color: #eebbc3; /* Fondo en modo obscuro */
+  color: #232946; /* Texto en modo obscuro */
+}
+
+/* Estilos para el título y párrafo externo en la sección uso */
+.uso .titulo-externo {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Estilos para las tarjetas en la sección uso */
+.carta-uso {
+  background-color: #faeee7; /* Fondo en modo claro */
+  color: #001858; /* Texto en modo claro */
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
+  width: 100%; /* Ancho completo en dispositivos móviles */
+}
+
+/* Modo Obscuro para las tarjetas en la sección uso */
+.dark-mode .carta-uso {
+  background-color: #fffffe; /* Fondo en modo obscuro */
+  color: #232946; /* Texto en modo obscuro */
+}
+
+/* Ajustes para dispositivos de escritorio en la sección uso */
+@media (min-width: 768px) {
+  .uso {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del flex container a columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center;
+  }
+
+  /* Estilos para el título y párrafo externo en la sección uso */
+  .uso .titulo-externo {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    order: 1; /* Cambia el orden del elemento para que aparezca primero */
+  }
+
+  /* Ajustes para las tarjetas en la sección uso */
+  .carta-uso {
+    width: 85%; /* Ancho del 85% para que las tarjetas abarquen más espacio */
+    margin-bottom: 2%; /* Márgen inferior del 2% entre las tarjetas */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
+    display: flex; /* Cambia a contenedor flexible para alinear elementos internos */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos internos */
+    align-items: center; /* Centra verticalmente los elementos internos */
+  }
+
+  /* Estilos para el título y el párrafo dentro de las tarjetas en la sección uso */
+  .carta-uso h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    order: 2; /* Cambia el orden del elemento para que aparezca después */
+  }
+
+  .carta-uso p {
+    font-size: 1.5em;
+    order: 3; /* Cambia el orden del elemento para que aparezca después */
+  }
+
+  /* Estilos para la imagen dentro de las tarjetas en la sección uso */
+  .carta-uso img {
+    max-width: 40%; /* Asegura que la imagen no ocupe demasiado espacio */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    order: 1; /* Cambia el orden del elemento para que aparezca primero */
+  }
+}
+
+/* Ajustes para dispositivos móviles en la sección uso */
+@media (max-width: 767px) {
+  .carta-uso {
+    width: 100%; /* Ancho completo para que las tarjetas ocupen todo el espacio */
+    flex-direction: column; /* Cambia la dirección del flex container a columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center;
+  }
+
+  .carta-uso img {
+    max-width: 80%; /* Asegura que la imagen no ocupe demasiado espacio */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    margin-bottom: 10px; /* Añade un margen inferior entre la imagen y el texto */
+  }
+}
+
+
+  /* Estilos para la sección "fin" */
+  .fin {
+    background-color: #232946; /* Fondo en modo obscuro */
+    color: #fef6e4; /* Texto en modo obscuro */
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Modo Claro para la sección "fin" */
+  body:not(.dark-mode) .fin {
+    background-color: #fef6e4; /* Fondo en modo claro */
+    color: #232946; /* Texto en modo claro */
+  }
+
+  /* Estilos para el título y los párrafos en la sección "fin" */
+  .fin h2,
+  .fin p {
+    margin-bottom: 10px;
+  }
+
+  /* Estilos para la caja de comentarios */
+  .comentarios {
+    margin-top: 20px;
+  }
+
+  .comentarios h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  /* Estilos para el formulario de comentarios */
+  #commentForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  #commentForm label {
+    margin-top: 10px;
+  }
+
+  #commentForm textarea {
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  #commentForm button {
+    padding: 10px;
+    background-color: #001858; /* Color de fondo del botón */
+    color: #fef6e4; /* Color del texto del botón */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  #commentForm button:hover {
+    background-color: #232946; /* Cambia el color de fondo al pasar el ratón */
+  }
+
+  /* Estilos para el área de comentarios guardados */
+  #comentariosGuardados {
+    margin-top: 20px;
+  }
+
+  #comentariosGuardados div {
+    margin-bottom: 10px;
+  }
+
+
+/* Ajustes para dispositivos móviles en la sección bloques */
+@media (max-width: 767px) {
+  .bloques {
+    flex-direction: column; /* Cambia la dirección del flex container a columna */
+  }
+
+  .izquierda, .derecha {
+    width: 100%; /* Asegura que ambos ocupen el ancho completo en dispositivos móviles */
+  }
+}
+
+/* Ajustes para dispositivos de escritorio en la sección bloques */
+@media (min-width: 768px) {
+  .bloques {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .izquierda, .derecha {
+    width: 48%; /* Ancho del 48% para que dos secciones encajen en una fila */
+  }
+}
+
+/* Añade una clase de animación a las tarjetas */
+.sticky-card {
+  opacity: 0; /* Inicialmente, las tarjetas son transparentes */
+  transition: opacity 0.5s ease-in-out; /* Agrega una transición de opacidad */
+}
+
+/* Define una clase para mostrar las tarjetas */
+.show-card {
+  opacity: 1; /* Muestra las tarjetas */
+}
+
+/* Estilos para la parte izquierda en la sección bloques */
+.izquierda {
+  width: 45%;
+  position: sticky;
+  top: 0;
+  margin-top: 20px; /* Ajusta según sea necesario para el espacio entre el encabezado y la parte izquierda */
+}
+
+/* Estilos para el título y el texto dentro de la parte izquierda */
+.izquierda h2,
+.izquierda p {
+  margin-bottom: 20px; /* Ajusta según sea necesario para el espacio entre el título y el párrafo */
+}
+
+/* Estilos para la parte derecha en la sección bloques */
+.derecha {
+  width: 45%;
+  position: relative; /* Cambia a relativo para que las tarjetas no se peguen a la parte izquierda */
+}
+
+/* Estilos para las sticky cards en la sección bloques */
+.sticky-card {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Define una clase para mostrar las tarjetas */
+.show-card {
+  opacity: 1;
+}
+
+/* Ajustes para dispositivos móviles en la sección bloques */
+@media (max-width: 767px) {
+  .bloques {
+    flex-direction: column; /* Cambia la dirección del flex container a columna */
+  }
+
+  .izquierda, .derecha {
+    width: 100%; /* Asegura que ambos ocupen el ancho completo en dispositivos móviles */
+    position: static; /* Cambia la posición a estática para que no estén pegados al borde superior */
+    margin-top: 0; /* Elimina el margen superior entre el encabezado y la parte izquierda */
+  }
+
+  /* Estilos para la parte izquierda en la sección bloques en móviles */
+  .izquierda {
+    margin-bottom: 20px; /* Añade un margen inferior entre la parte izquierda y la parte derecha */
+  }
+
+  /* Estilos para la parte derecha en la sección bloques en móviles */
+  .derecha {
+    margin-top: 20px; /* Añade un margen superior entre la parte derecha y la parte izquierda */
+  }
+
+  /* Estilos para las sticky cards en la sección bloques en móviles */
+  .sticky-card {
+    opacity: 1; /* Muestra las tarjetas sin animaciones */
+    transition: none; /* Elimina la transición */
+  }
+}
+
+/* Ajustes para dispositivos de escritorio en la sección uso */
+@media (min-width: 768px) {
+  .uso {
+    display: flex;
+    flex-direction: column-reverse; /* Cambia la dirección del flex container a columna y coloca el contenido al final */
+    align-items: flex-start; /* Alinea el contenido al principio de la sección */
+    text-align: left;
+  }
+
+  /* Estilos para las tarjetas en la sección uso en modo escritorio */
+  .carta-uso {
+    width: 85%; /* Ancho del 85% para que las tarjetas abarquen un ancho del 85% */
+    margin: 10px auto; /* Centra las tarjetas y agrega margen entre ellas */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
+  }
+  
+  /* Estilos para el título y el párrafo dentro de las tarjetas en la sección uso en modo escritorio */
+  .carta-uso h3, .carta-uso p {
+    text-align: left; /* Alinea el texto a la izquierda dentro de las tarjetas */
+  }
+}
+
+/* Ajustes para dispositivos de escritorio en la sección uso */
+@media (min-width: 768px) {
+  .uso {
+    display: flex;
+    flex-direction: column-reverse; /* Cambia la dirección del flex container a columna y coloca el contenido al final */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: left;
+  }
+
+  /* Estilos para las tarjetas en la sección uso en modo escritorio */
+  .carta-uso {
+    width: 85%; /* Ancho del 85% para que las tarjetas abarquen un ancho del 85% */
+    margin: 10px auto; /* Centra las tarjetas y agrega margen entre ellas */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
+  }
+  
+  /* Estilos para el título y el párrafo dentro de las tarjetas en la sección uso en modo escritorio */
+  .carta-uso h3, .carta-uso p {
+    text-align: left; /* Alinea el texto a la izquierda dentro de las tarjetas */
+  }
+}
+
+/* Estilos para la nueva sección "nose" */
+.nose {
+  background-color: #f3d2c1; /* Fondo en modo claro */
+  color: #232946; /* Texto en modo claro */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Modo Obscuro para la sección "nose" */
+.dark-mode .nose {
+  background-color: #d4d8f0; /* Fondo en modo obscuro */
+  color: #fffffe; /* Texto en modo obscuro */
+}
+
+/* Estilos para el título en la sección "nose" */
+.nose h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Estilos para la imagen en la sección "nose" */
+.nose img {
+  max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+  height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+  margin-bottom: 10px;
+}
+
+/* Estilos para los enlaces en la sección "nose" */
+.nose a {
+  display: block; /* Hace que los enlaces ocupen todo el ancho disponible */
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ajustes para dispositivos de escritorio en la sección "nose" */
+@media (min-width: 768px) {
+  .nose {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: left;
+  }
+
+  /* Coloca el enlace de Drive a la izquierda en dispositivos de escritorio */
+  .nose .drive-link {
+    order: -1; /* Cambia el orden del elemento, colocándolo antes del texto */
+  }
+
+  /* Alinea el texto a la izquierda en dispositivos de escritorio */
+  .nose h2, .nose p {
+    text-align: left;
+  }
+}
+
+/* Estilos para las tarjetas en la sección uso */
+.carta-uso {
+  background-color: #faeee7; /* Fondo en modo claro */
+  color: #001858; /* Texto en modo claro */
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
+  width: 94%; /* Ancho del 94% para que las tarjetas abarquen el 94% del contenedor */
+  margin: 3% auto; /* Margen exterior del 3% y centrado horizontalmente */
+}
+
+/* Modo Obscuro para las tarjetas en la sección uso */
+.dark-mode .carta-uso {
+  background-color: #fffffe; /* Fondo en modo obscuro */
+  color: #232946; /* Texto en modo obscuro */
+}
+
+/* Estilos para el título y el párrafo dentro de las tarjetas en la sección uso */
+.carta-uso h3 {
+  font-size: 1.8em; /* Aumenta el tamaño de la fuente en modo escritorio */
+  margin-bottom: 10px;
+}
+
+.carta-uso p {
+  font-size: 1.3em; /* Aumenta el tamaño de la fuente en modo escritorio */
+}
+
+/* Estilos para la imagen dentro de las tarjetas en la sección uso */
+.carta-uso img {
+  max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+  height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+  margin-bottom: 10px; /* Añade espacio entre la imagen y el texto */
+}
+
+/* Ajustes para dispositivos de escritorio en la sección uso */
+@media (min-width: 768px) {
+  .carta-uso {
+    width: 90%; /* Ancho del 48% para que dos tarjetas encajen en una fila */
+    margin: 2%; /* Márgen entre las tarjetas en modo escritorio */
+  }
+
+  /* Estilos para el título y el párrafo dentro de las tarjetas en la sección uso en modo escritorio */
+  .carta-uso h3,
+  .carta-uso p {
+    font-size: 1.9em; /* Ajusta según sea necesario para el tamaño de la fuente en modo escritorio */
+  }
+
+  /* Estilos para la imagen dentro de las tarjetas en la sección uso en modo escritorio */
+  .carta-uso img {
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    margin-bottom: 3%; /* Añade espacio entre la imagen y el texto */
+  }
+}
+
+/* Estilos para la imagen dentro de las tarjetas en la sección uso */
+.carta-uso img {
+  max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+  height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+  margin-bottom: 10px; /* Añade espacio entre la imagen y el texto */
+  margin: 3% 8%; /* Agrega un margen exterior del 3% en la parte superior e inferior */
+}
+
+/* Ajustes para dispositivos de escritorio en la sección uso */
+@media (min-width: 768px) {
+  /* Estilos para la imagen dentro de las tarjetas en la sección uso en modo escritorio */
+  .carta-uso img {
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    margin-bottom: 10px; /* Añade espacio entre la imagen y el texto */
+    margin: 3% 8%; /* Agrega un margen exterior del 3% en la parte superior e inferior */
+  }
+}
