@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+    />
+    <link rel="icon" type="image/x-icon" href="ico.ico">
+    <!-- Agregando la tipografía Poppins -->
+    <title>Newhorizons</title>
+  </head>
+  <body>
+    <header>
+      <div class="titulo">Newhorizons</div>
+      <button id="toggle-mode" onclick="toggleMode()">
+        <span class="icon" id="light-icon">☀️</span>
+        <span class="icon" id="dark-icon" style="display: none">🌙</span>
+      </button>
+    </header>
+
+    <section class="contenido">
+      <!-- Imagen con animación -->
+      <img class="img-responsive" src="images/im1.png" alt="Imagen 1" />
+
+      <!-- Párrafo con animación -->
+      <p>
+        Una app diseñada para ayudarte a tomar el control de tus finanzas
+        personales y mejorar tus hábitos financieros. Con una interfaz intuitiva
+        y poderosas herramientas de seguimiento, te permite gestionar tus
+        ingresos, gastos y metas financieras de una manera sencilla y efectiva,
+        al tiempo que fomenta el desarrollo de hábitos saludables para una vida
+        financiera sólida.
+      </p>
+    </section>
+
+    <section class="producto">
+      <h2>PRODUCTO</h2>
+      <p>
+        Desde el planteamiento de la idea se busco algo que resolvira una
+        problematica y en un entorno tan cambiante, se encontro la ayuda, esta
+        app ayuda a mejorar tu vida y tu entorno teniendo un control de tus
+        finanzas, salud y demas cosas.
+      </p>
+      <div class="tarjetas-container">
+        <!-- Tarjeta 1 -->
+        <div class="tarjeta">
+          <h3>Segura</h3>
+          <p>
+            Contiene un sistema de seguridad basado en la nube, con comprobación
+            de identidad usando los servidores de FireBase
+          </p>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="tarjeta">
+          <h3>SIMPLE E INTUITIVA</h3>
+          <p>
+            Hecha para la comodidad del usuario, siendo que cada bloque, color y
+            forma están hechas para mantener una armonía y guía para el usuario
+            garantizando la comodidad del mismo
+          </p>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="tarjeta">
+          <h3>ABIERTA A CAMBIOS</h3>
+          <p>
+            Dado que desde su creación se concibió como una aplicación
+            multipropósito esta hecha para adaptarse a los cambios y necesidades
+            que requiera el usuario
+          </p>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="tarjeta">
+          <h3>AMIGABLE CON EL USUARIO</h3>
+          <p>
+            La aplicación está hecha para que sea llamativa, intuitiva y cómoda,
+            además de proporcionar una comodidad emocional al usuario
+            proporcionando un saludo y frases que te motivan cada día
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Agrega esto dentro de la sección bloques -->
+    <section class="bloques">
+      <div class="izquierda">
+        <!-- Contenido izquierdo -->
+        <h2>BLOQUES Y SU USO</h2>
+        <p>
+          En este pequeño apartado podras ver cada bloque que constituye la
+          aplicacion y como es su funcionamieno.
+          <h2>si le das clic a la imagen se
+            expandira para preciarlo mejor</h2>
+        </p>
+      </div>
+      <div class="derecha">
+        <!-- Tarjetas en bloques -->
+        <div class="sticky-card" onclick="expandCard(this)">
+          <h3>Pantalla de carga</h3>
+          <p>
+            Funcionamiento de la pantalla de carga que usa un cronometro para
+            inciar la app y cargar los componentes
+          </p>
+          <img
+            src="images/blocks.png"
+            alt="Imagen 1"
+            width="50%"
+            height="50%"
+          />
+        </div>
+        <div class="sticky-card" onclick="expandCard(this)">
+          <h3>Pantalla de inico</h3>
+          <p>
+            La pantalla que pecarga todos los witget necesarios y utilidades de
+            la misma app
+          </p>
+          <img
+            src="images/blocks (2).png"
+            alt="Imagen 2"
+            width="50%"
+            height="50%"
+          />
+        </div>
+        <div class="sticky-card" onclick="expandCard(this)">
+          <h3>Pantalla control de gastos</h3>
+          <p>
+            La pantalla que pecarga todos los witget necesarios y utilidades de
+            la misma app que seran usados para el control monetario
+          </p>
+          <img
+            src="images/blocks (3).png"
+            alt="Imagen 3"
+            width="50%"
+            height="50%"
+          />
+        </div>
+        <div class="sticky-card" onclick="expandCard(this)">
+          <h3>Pantalla ingresos</h3>
+          <p>
+            La pantalla encargada de hacer los calculos de ingreso y situacon
+            monetaria demas encargada de crear listas
+          </p>
+          <img
+            src="images/blocks (4).png"
+            alt="Imagen 4"
+            width="50%"
+            height="50%"
+          />
+        </div>
+        <div class="sticky-card" onclick="expandCard(this)">
+          <h3>Pantalla gastos</h3>
+          <p>
+            La pantalla encargada de hacer los calculos de gastos y situacon
+            monetaria demas encargada de crear listas
+          </p>
+          <img
+            src="images/blocks (5).png"
+            alt="Imagen 5"
+            width="50%"
+            height="50%"
+          />
+        </div>
+        <div class="sticky-card" onclick="expandCard(this)">
+          <h3>Pantalla notas</h3>
+          <p>
+            La pantalla que pecarga todas las notas y permite crear, borrar,
+            editar notas al igual que recordatorios
+          </p>
+          <img
+            src="images/blocks (6).png"
+            alt="Imagen 6"
+            width="50%"
+            height="50%"
+          />
+        </div>
+        <div class="sticky-card" onclick="expandCard(this)">
+          <h3>Pantalla salud</h3>
+          <p>
+            La pantalla que pecarga todos los witget necesarios y utilidades de
+            la misma app que seran usados para las diferentes categorias de
+            salud
+          </p>
+          <img
+            src="images/blocks (7).png"
+            alt="Imagen 7"
+            width="50%"
+            height="50%"
+          />
+        </div>
+        <div class="sticky-card" onclick="expandCard(this)">
+          <h3>Pantalla IMC</h3>
+          <p>
+            La pantalla que te ayuda a saber si estas en tu peso ideal y que te
+            da consejos depediedo tu resultado
+          </p>
+          <img
+            src="images/blocks (8).png"
+            alt="Imagen 8"
+            width="50%"
+            height="50%"
+          />
+        </div>
+        <div class="sticky-card" onclick="expandCard(this)">
+          <h3>Pantalla agua</h3>
+          <p>
+            La pantalla donde puedes saber si tomas suficiete agua y cuanta
+            necesitas
+          </p>
+          <img
+            src="images/blocks (9).png"
+            alt="Imagen 9"
+            width="50%"
+            height="50%"
+          />
+        </div>
+        <div class="sticky-card" onclick="expandCard(this)">
+          <h3>Pantalla RCQ</h3>
+          <p>
+            La pantalla que te ayuda a sabr tu proporcion corporal y tu estado
+            de salud
+          </p>
+          <img
+            src="images/blocks (10).png"
+            alt="Imagen 10"
+            width="50%"
+            height="50%"
+          />
+        </div>
+        <!-- Agrega más tarjetas según sea necesario -->
+      </div>
+    </section>
+    <!-- Agrega esto dentro de la sección uso -->
+    <section class="uso">
+      <!-- Parte 1: Título y párrafo -->
+      <div class="titulo-externo">
+        <h2>Aprende a usar la App</h2>
+        <p>
+          Somos Newhorizons, una aplicación diseñada para transformar tus
+          hábitos financieros y mejorar tu calidad de vida. Descubre cómo
+          nuestra app puede ayudarte a tomar el control de tus finanzas
+          personales y más.
+        </p>
+      </div>
+
+      <!-- Parte 2: Tarjetas con título, párrafo e imagen -->
+      <div class="tarjetas-container">
+        <!-- Tarjeta 1 -->
+        <div class="carta-uso">
+                    <p>
+            Primero inicia sesion con el servidor ingresando tu usario y contraseña, recuerda que es sin espacio y si no tienes uno crealo
+          </p>
+          <img src="images/lol1.jpg" alt="foto" width="30%"
+          height="30%" />
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="carta-uso">
+          
+          <p>
+            Descubre la experiencia y funcionalidades, que contiene para tu utilidad, siendo intuitivas para que no alla perdida
+          </p>
+          <img src="images/eo.jpg" alt="FotoTT" width="30%"
+          height="30%" />
+        </div>
+
+        <!-- Agrega más tarjetas según sea necesario -->
+      </div>
+    </section>
+
+    <!-- Agrega esta sección en el cuerpo de tu documento HTML -->
+<section class="nose">
+  <h2>Galería mit app</h2>
+  <a href="#" class="drive-link">Enlace a Google Drive</a>
+  <img src="ruta_de_la_imagen.jpg" alt="Descripción de la imagen">
+  <a href="#">Otro enlace</a>
+</section>
+
+
+    <!-- Agrega esto al final del body para la sección "fin" -->
+    <section class="fin">
+      <h2>¡Gracias por explorar Newhorizons!</h2>
+
+      <p>
+        En Newhorizons, estamos comprometidos a brindarte una experiencia
+        excepcional para mejorar tu vida financiera y bienestar general. Explora
+        todas las características que ofrecemos y descubre un nuevo horizonte
+        para tus hábitos financieros.
+      </p>
+
+      <p>
+        ¿Tienes alguna pregunta o comentario? Estamos aquí para ayudarte.
+        Contáctanos a través de nuestros canales de soporte y deja que
+        Newhorizons sea tu guía en el camino hacia una vida financiera más
+        saludable.
+      </p>
+
+      <!-- Caja de comentarios -->
+
+      <div class="comentarios">
+        <h3>Deja tu comentario</h3>
+        <form id="commentForm">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="comentario">Comentario:</label>
+          <textarea id="comentario" name="comentario" required></textarea>
+
+          <button type="submit">Publicar</button>
+        </form>
+
+        <!-- Área para mostrar comentarios -->
+        <div id="comentariosGuardados">
+          <!-- Aquí se mostrarán los comentarios -->
+        </div>
+      </div>
+    </section>
+    <!-- Agrega esto al final del body para la tarjeta expandida y el fondo oscuro -->
+    <div class="overlay" onclick="collapseCard()"></div>
+    <div class="expanded-card" id="expandedCard"></div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
