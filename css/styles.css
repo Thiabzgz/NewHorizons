@@ -138,7 +138,7 @@ body:not(.dark-mode) #light-icon {
   margin: 10px;
   border-radius: 8px;
   box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
-  width: 100%; /* Ancho completo en dispositivos móviles */
+  width: 95%; /* Ancho completo en dispositivos móviles */
 }
 
 /* Modo Obscuro */
@@ -157,43 +157,8 @@ body:not(.dark-mode) #light-icon {
   font-size: 1.5em;
 }
 
-/* Ajustes para dispositivos de escritorio */
-@media (min-width: 768px) {
-  /* Contenedor flex para las tarjetas */
-  .tarjetas-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
 
-  /* Tarjeta con altura fija */
-  .tarjeta {
-    width: 48%; /* Ancho del 48% para que dos tarjetas encajen en una fila */
-    margin-bottom: 2%; /* Márgen inferior del 2% entre las tarjetas */
-    box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
-    height: 300px; /* Altura fija para todas las tarjetas */
-    padding: 2% 5%; /* Margen interno del 5% */
-  }
-}
 
-/* Agrega estilos para la sección bloques */
-.bloques {
-  display: flex;
-  justify-content: space-between;
-}
-
-/* Estilos para la parte izquierda */
-.izquierda {
-  width: 45%; /* Ajusta según sea necesario */
-  position: sticky;
-}
-
-/* Estilos para la parte derecha en la sección bloques */
-.derecha {
-  width: 45%; /* Ajusta según sea necesario */
-  position: sticky;
-  top: 0;
-}
 
 /* Estilos para las sticky cards en la sección bloques */
 .sticky-card {
@@ -465,17 +430,7 @@ body:not(.dark-mode) #light-icon {
   }
 }
 
-/* Ajustes para dispositivos de escritorio en la sección bloques */
-@media (min-width: 768px) {
-  .bloques {
-    display: flex;
-    justify-content: space-between;
-  }
 
-  .izquierda, .derecha {
-    width: 48%; /* Ancho del 48% para que dos secciones encajen en una fila */
-  }
-}
 
 /* Añade una clase de animación a las tarjetas */
 .sticky-card {
@@ -488,25 +443,6 @@ body:not(.dark-mode) #light-icon {
   opacity: 1; /* Muestra las tarjetas */
 }
 
-/* Estilos para la parte izquierda en la sección bloques */
-.izquierda {
-  width: 45%;
-  position: sticky;
-  top: 0;
-  margin-top: 20px; /* Ajusta según sea necesario para el espacio entre el encabezado y la parte izquierda */
-}
-
-/* Estilos para el título y el texto dentro de la parte izquierda */
-.izquierda h2,
-.izquierda p {
-  margin-bottom: 20px; /* Ajusta según sea necesario para el espacio entre el título y el párrafo */
-}
-
-/* Estilos para la parte derecha en la sección bloques */
-.derecha {
-  width: 45%;
-  position: relative; /* Cambia a relativo para que las tarjetas no se peguen a la parte izquierda */
-}
 
 /* Estilos para las sticky cards en la sección bloques */
 .sticky-card {
@@ -721,3 +657,97 @@ body:not(.dark-mode) #light-icon {
     margin: 3% 8%; /* Agrega un margen exterior del 3% en la parte superior e inferior */
   }
 }
+
+
+
+
+/* Estilos para las cartas en la sección bloques ya matenme */
+.carta {
+  background-color: #faeee7; /* Fondo en modo claro */
+  color: #001858; /* Texto en modo claro */
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
+  display: none; /* Por defecto, las cartas están ocultas */
+  overflow: hidden; /* Oculta el desbordamiento de la carta */
+}
+
+/* Modo Obscuro para las cartas en la sección bloques */
+.dark-mode .carta {
+  background-color: #fffffe; /* Fondo en modo obscuro */
+  color: #232946; /* Texto en modo obscuro */
+}
+
+/* Añade estilos para la animación de las cartas */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Desplazamiento inicial hacia abajo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Sin desplazamiento al final de la animación */
+  }
+}
+
+/* Ajustes para dispositivos móviles en la sección bloques */
+@media (max-width: 767px) {
+  .bloques {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del flex container a columna */
+  }
+
+  /* Muestra todas las cartas en modo móvil con animación */
+  .carta {
+    display: block;
+    width: 100%; /* Ancho completo en dispositivos móviles */
+    animation: aparecer 0.5s ease-in-out; /* Aplica la animación de aparecer */
+  }
+}
+
+/* Ajustes para dispositivos de escritorio en la sección bloques */
+@media (min-width: 768px) {
+  .bloques {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Muestra todas las cartas en modo escritorio con animación */
+  .carta {
+    display: block;
+    width: 48%; /* Ancho del 48% para que dos cartas encajen en una fila */
+    animation: aparecer 0.5s ease-in-out; /* Aplica la animación de aparecer */
+  }
+}
+
+
+/* Añade estilos para las cartas en la sección bloques en modo escritorio ya wey?*/
+@media (min-width: 768px) {
+  .bloques {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del flex container a columna */
+  }
+
+  /* Estilos para el título y el párrafo en la sección bloques en modo escritorio */
+  .izquierda h2,
+  .izquierda p {
+    margin-bottom: 20px; /* Ajusta según sea necesario para el espacio entre el título y el párrafo */
+  }
+
+  /* Muestra todas las cartas en modo escritorio con animación debajo del título y el párrafo */
+  .carta {
+    display: block;
+    width: 100%; /* Ancho completo en dispositivos móviles */
+    animation: aparecer 0.5s ease-in-out; /* Aplica la animación de aparecer */
+    margin-bottom: 10px; /* Ajusta según sea necesario para el espacio entre las cartas */
+  }
+}
+
+body {
+/* Otros estilos existentes */
+
+margin: 0 auto; /* Alinea la página horizontalmente centrada */
+max-width: 1200px; /* Ajusta según sea necesario para limitar el ancho máximo */
+  }
+  
