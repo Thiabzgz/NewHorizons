@@ -273,18 +273,34 @@
       </div>
     </section>
 
-    <!-- Agrega esta sección en el cuerpo de tu documento HTML -->
+ 
+<!-- Agrega esta sección en el cuerpo de tu documento HTML -->
 <section class="nose">
   <h2>Galería mit app</h2>
   <a href="#" class="drive-link">https://drive.google.com/drive/folders/1OIDVfrOC7P5jR2nyHRrKP6CuMBw7PBSC</a>
-            <img
-            src="images/pipo.jpg"
-            alt="Imagen 1"
-            width="50%"
-            height="50%"
-          />
-  <a href="#">Otro enlace</a>
+  <img src="images/pipo.jpg" alt="Imagen 1" width="50%" height="50%" />
+  <a href="#" download="NewHorizonsxy.apk">Descargar APK</a>
 </section>
+
+
+Para los estilos CSS que evitan que el texto sobresalga, puedes agregar algo como esto:
+
+```css
+/* Estilos para la sección nose */
+.nose {
+  max-width: 100%; /* Asegura que la sección no sea más ancha que la ventana */
+  overflow: hidden; /* Oculta el desbordamiento del contenido */
+  text-align: center; /* Centra el texto e imágenes dentro de la sección */
+}
+
+/* Estilos para la imagen dentro de la sección nose */
+.nose img {
+  max-width: 100%; /* Hace que la imagen sea responsiva y no sobresalga */
+  height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+}
+```
+
+Recuerda ajustar estos estilos según tus necesidades específicas.>
 
 
     <!-- Agrega esto al final del body para la sección "fin" -->
